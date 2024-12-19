@@ -1,0 +1,33 @@
+# Visit https://foundry-rs.github.io/starknet-foundry/appendix/snfoundry-toml.html for more information
+
+# [sncast.myprofile1]                                    # Define a profile name
+# url = "http://127.0.0.1:5050/"                         # Url of the RPC provider
+# accounts_file = "../account-file"                      # Path to the file with the account data
+# account = "mainuser"                                   # Account from `accounts_file` or default account file that will be used for the transactions
+# keystore = "~/keystore"                                # Path to the keystore file
+# wait_params = { timeout = 500, retry_interval = 10 }   # Wait for submitted transaction parameters
+# block_explorer = "StarkScan"                           # Block explorer service used to display links to transaction details
+
+
+# General configuration for sncast
+
+[sncast.local]                                   # Profile for local development
+url = "http://127.0.0.1:5050/"                  # RPC URL for local devnet
+accounts_file = "~/local_accounts.json"         # Path to the account file for local usage
+account = "local_user"                          # Account name used for transactions
+keystore = "~/local_keystore"                   # Path to the keystore file (if needed)
+wait_params = { timeout = 500, retry_interval = 10 }  # Waiting params for transactions
+block_explorer = "StarkScan"                    # Optional: Block explorer to use (e.g., StarkScan)
+
+
+[sncast.reward_system]
+url = "https://starknet-sepolia.g.alchemy.com/starknet/version/rpc/v0_7/o1lEX0VBV5svBnSxttojbhEM0_p6uy4_"          
+accounts_file = "~/Documents/cairo_projects/assignment_two/sepolia_account.json"
+account = "reward_system"
+wait_params = { timeout = 1000, retry_interval = 20 }
+block_explorer = "StarkScan"
+
+[sncast.nomadic2]
+account = "nomadic2"
+accounts-file = "/home/emmanuel-doji/.starknet_accounts/starknet_open_zeppelin_accounts.json"
+url = ""
